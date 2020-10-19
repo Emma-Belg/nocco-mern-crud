@@ -26,9 +26,6 @@ export default class Products extends Component {
         }
     }
 
-    SubmitValue = () => {
-        this.props.handleData(this.state.data)
-    }
     componentDidMount() {
         axios.get('http://localhost:8081/api/products/')
             .then((res) => {
@@ -42,10 +39,6 @@ export default class Products extends Component {
                     console.log('imageLocation', this.state.imageLocation)
             }
             });
-/*        this.setState(
-            this.state.imageLocation.map(data => {
-                imageLocation: `../assets/products/${data.image}`
-            }))*/
         console.log('this.state.data.image', this.state.imageLocation);
     }
 
@@ -82,30 +75,6 @@ export default class Products extends Component {
                                     </div>
                                 </div>
                             </div>
-{/*                            <div className="d-flex container flex-column flex-sm-row">
-                                <div className="flex-column justify-content-around">
-                                    <div className="card-deck">
-                                        <div className="card col-sm-6 col-md-4 col-lg-3 mb-4 mt-4 shadow-sm">
-                                            <img className="card-img-top" src={`${this.state.imageLocation}`} alt={data.image}/>
-                                            <div className="card-body">
-                                                <h5 className="card-title">{data.title}</h5>
-                                                <h6 className="card-subtitle mb-2 text-muted">€{data.price}   |   {data.size}</h6>
-                                                <h6 className="card-subtitle mb-2 text-muted">{data.brand}</h6>
-                                                <p className="card-text"><b>Description</b>: {data.description}</p>
-                                                <Link to="/limon" className="btn btn-primary">{data.title}</Link>
-                                            </div>
-                                            <img className="card-img-top" src={limonImg} alt={data.title}/>
-                                            <ul>
-                                                <li>
-                                                    <b>Ingredients</b>: {data.ingredients}
-                                                </li>
-                                            </ul>
-                                            <hr/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>*/}
                         </main>
 
                     </React.Fragment>

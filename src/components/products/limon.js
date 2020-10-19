@@ -38,9 +38,7 @@ export default class Limon extends Component {
 
     render() {
         return (
-<div>
-    <img className="img=fluid flex-column justify-content-around" src={limonImg} alt=""/></div>
-/*        this.state.data[0].value(data => {
+        this.state.data.map(data => {
             return (
                 <React.Fragment>
                     <main className="d-flex">
@@ -60,7 +58,7 @@ export default class Limon extends Component {
 
                 </React.Fragment>
             );
-        })*/
+        })
         );
     }
 }
