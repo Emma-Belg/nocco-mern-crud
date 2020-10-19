@@ -5,7 +5,6 @@ import miamiImg from "../assets/products/nocco-miami.jpg";
 import peachImg from "../assets/products/nocco-peach.jpg";
 import pearImg from "../assets/products/nocco-pear.jpg";
 import tropicalImg from "../assets/products/nocco-tropical.jpg";
-import {Link} from "react-router-dom";
 
 export default class Products extends Component {
     constructor(props) {
@@ -16,14 +15,6 @@ export default class Products extends Component {
             // eslint-disable-next-line no-undef
             imageLocation: `../assets/products/`
         };
-        let imageLocation = `../assets/products/${this.state.data.image}`;
-        //console.log('imageLocation', imageLocation);
-        if (this.state.data.image) {
-            this.setState({
-                image: imageLocation
-            });
-            console.log('IMG', imageLocation)
-        }
     }
 
     componentDidMount() {
@@ -36,10 +27,8 @@ export default class Products extends Component {
                     data: res.data,
                     imageLocation: `../assets/products/${res.data[i].image}`
                 })
-                    console.log('imageLocation', this.state.imageLocation)
             }
             });
-        console.log('this.state.data.image', this.state.imageLocation);
     }
 
 
@@ -58,7 +47,7 @@ export default class Products extends Component {
                                             <h6 className="card-subtitle mb-2 text-muted">€{data.price}   |   {data.size}</h6>
                                             <h6 className="card-subtitle mb-2 text-muted">{data.brand}</h6>
                                             <p className="card-text"><b>Description</b>: {data.description}</p>
-                                            <Link to="/limon" className="btn btn-primary">{data.title}</Link>
+                                            <a href="" className="btn btn-primary">{data.title}</a>
                                         </div>
                                         <br/>
                                     </div>
@@ -69,7 +58,7 @@ export default class Products extends Component {
                                             <h6 className="card-subtitle mb-2 text-muted">€{data.price}   |   {data.size}</h6>
                                             <h6 className="card-subtitle mb-2 text-muted">{data.brand}</h6>
                                             <p className="card-text"><b>Description</b>: {data.description}</p>
-                                            <Link to="/limon" className="btn btn-primary">{data.title}</Link>
+                                            <a href=""  className="btn btn-primary">{data.title}</a>
                                         </div>
                                         <br/>
                                     </div>

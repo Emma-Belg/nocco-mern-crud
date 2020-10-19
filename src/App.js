@@ -5,9 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CreateProducts from "./components/CreateProducts";
 import EditProduct from "./components/EditProduct";
 import Products from "./components/Products";
-import Limon from "./components/products/limon";
 import logo from "./assets/logos/nocco-white-transparent-200.png"
-//import 'nocco-white-transparent-200' from "./assets/nocco-white-transparent-200.png";
 
 class App extends Component {
   render() {
@@ -34,8 +32,6 @@ class App extends Component {
                 <Route path="/" exact component={Products} />
                 <Route path="/edit/:id" component={EditProduct} />
                 <Route path="/create" component={CreateProducts} />
-
-                <Route path="/limon" exact component={Limon} />
             </div>
         </Router>
 
